@@ -1,0 +1,20 @@
+header {
+  .title {
+    margin-inline-start: 16px;
+    flex: 1 1 auto;
+  }
+  
+  .list {
+    display: flex;
+    align-items: center;
+  }
+
+  li:not(:last-child) {
+    margin-inline-end: 30px;
+  }
+  
+  .nav {
+    margin: 0 0 45px 0;
+  }
+}
+

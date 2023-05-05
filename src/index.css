@@ -1,0 +1,26 @@
+*,
+*:before,
+*:after {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ box-sizing: border-box;
+}
+
+body {
+    background-color: #E7F6FF;
+}
+
+.wrapper {
+    background: #FFFFFF;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+    padding: 40px;
+    margin-block: 85px;
+    max-width: 1140px;
+    margin-inline: auto;
+}
+
+li {
+    list-style: none;
+}
