@@ -1,4 +1,16 @@
 .shoesList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  .shoesItems {
+    text-align: center;
+  }
+  .shoesBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .plus {
+    cursor: pointer;
+  }
 }

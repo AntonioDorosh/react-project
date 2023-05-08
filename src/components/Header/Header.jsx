@@ -1,37 +1,17 @@
-import React from 'react';
-import {Container, Nav} from "react-bootstrap";
-import styles from './Header.module.scss'
+import React, {useState} from 'react';
+import {Container} from "react-bootstrap";
+import Navigation from "../Navigation/Navigation.jsx";
+import SideBar from "../UI/Modal/SideBar.jsx";
+import {handleClose, handleShow} from "../../utils/modalAppear.js";
 
 const Header = () => {
+    const [show, setShow] = useState(false);
+
     return (
         <header>
             <Container>
-                <Nav className={styles.nav}>
-                    <figure>
-                        <img src="/logo.png" alt="logo"/>
-                    </figure>
-                    <div className={styles.title}>
-                        <h2>REACT SHOP</h2>
-                        <p>Магазин кроссовок</p>
-                    </div>
-                    <ul className={styles.list}>
-                        <li>
-                            <figure>
-                                <img src="/cart.svg" alt="cart"/>
-                            </figure>
-                        </li>
-                        <li>
-                            <figure>
-                                <img src="/heart.svg" alt="heart"/>
-                            </figure>
-                        </li>
-                        <li>
-                            <figure>
-                                <img src="/profile.svg" alt="profile"/>
-                            </figure>
-                        </li>
-                    </ul>
-                </Nav>
+                <Navigation handleShow={() => handleShow(setShow)}/>
+                <SideBar show={show} handleClose={() => handleClose(setShow)} handleShow={() => handleShow(setShow)}/>
             </Container>
         </header>
     );
